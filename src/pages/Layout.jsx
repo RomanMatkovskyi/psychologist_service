@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-      <header className=" max-w-74 pb-6 pt-6 flex justify-between items-center border-b border-solid border-gray-700 border-opacity-20">
+      <header className="max-w-74 pb-6 pt-6 flex justify-between items-center border-b border-solid border-gray-700 border-opacity-20">
         <div className="flex gap-32">
           <Link to="/">
             <img src={logo} alt="logo" width={218} height={24} />
