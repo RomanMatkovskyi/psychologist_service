@@ -9,6 +9,8 @@ module.exports = {
         mainOrange: "#FC832C",
         mainWhite: "#FBFBFB",
         hoverOrange: "#F37113",
+        modalBgColor: "rgba(25, 26, 21, 0.6);",
+        borderColor: "rgba(25, 26, 21, 0.1)",
       },
       spacing: {
         74: "1184px",
