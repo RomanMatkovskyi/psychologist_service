@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import heroImg from "../assets/hero_img.jpg";
 import sprite from "../assets/sprite.svg";
+import LoginPopUp from "../components/LoginPopUp/LoginPopUp";
+import RegisterPopUp from "../components/RegisterPopUp/RegisterPopUp";
 
 const Home = () => {
-  const [loginModal, setLoginModal] = useState(true);
+  const [loginModal, setLoginModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
 
   return (
@@ -62,49 +64,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {loginModal && (
-        <div className="absolute left-0 top-0 w-[100vw] h-[100vh] overflow-hidden bg-modalBgColor">
-          <div className="absolute inset-1/2 -translate-x-1/2 -translate-y-1/2  w-[566px] h-[510px] bg-mainWhite rounded-[30px] p-16">
-            <button
-              type="button"
-              onClick={() => {
-                setLoginModal(false);
-              }}
-            >
-              <svg
-                width={32}
-                height={32}
-                className="stroke-current absolute right-[20px] top-[20px]"
-              >
-                <use xlinkHref={`${sprite}#icon-close`}></use>
-              </svg>
-            </button>
-            <h2 className="mb-5 font-medium text-[40px] leading-snug tracking-tight text-mainBlack">
-              Log In
-            </h2>
-            <p className="mb-10 text-left text-base leading-[125%] text-modalBgColor">
-              Welcome back! Please enter your credentials to access your account
-              and continue your search for a psychologist.
-            </p>
-            <form>
-              <input
-                type="email"
-                className="w-full mb-[18px] p-4 rounded-2xl border border-borderColor text-mainBlack focus:outline-none"
-              />
-              <input
-                type="password"
-                className="w-full mb-10 p-4 rounded-2xl border border-borderColor text-mainBlack focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="w-full bg-mainOrange py-4 rounded-3xl text-mainWhite font-medium text-base leading-[125%] tracking-tighter transition-all duration-100 ease-in-out hover:bg-hoverOrange"
-              >
-                Log In
-              </button>
-            </form>
-          </div>
-        </div>
-      )}
+      {/* --------Log In Modal ----------- */}
+      {loginModal && <LoginPopUp setLoginModal={setLoginModal} />}
+      {/* --------Sign Up Modal ----------- */}
+      {signUpModal && <RegisterPopUp setSignUpModal={setSignUpModal} />}
     </section>
   );
 };
