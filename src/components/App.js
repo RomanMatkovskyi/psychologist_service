@@ -7,15 +7,13 @@ import Psychologists from "../pages/Psychologists";
 
 function App() {
   return (
-    <div className="container">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="psychologists" element={<Favorites />} />
-          <Route path="favorites" element={<Psychologists />} />
-        </Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="psychologists" element={<Psychologists />} />
+        <Route path="favorites" element={<Favorites />} />
+      </Route>
+    </Routes>
   );
 }
 

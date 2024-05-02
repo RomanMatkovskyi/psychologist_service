@@ -1,7 +1,11 @@
-import React from "react";
+import Filter from "../components/Filter/Filter";
 
 const Psychologists = () => {
-  return <div>Psychologists</div>;
+  return (
+    <div className="container">
+      <Filter />
+    </div>
+  );
 };
 
 export default Psychologists;

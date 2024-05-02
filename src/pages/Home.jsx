@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <section className="pt-[78px] pb-[100px]">
-      <div className="flex gap-[125px]">
+      <div className="container flex gap-[125px]">
         <div>
           <h1 className="font-semibold text-8xl tracking-tight leading-none text-mainBlack w-[602px] mb-5">
             The road to the <span className="text-mainOrange">depths</span> of
